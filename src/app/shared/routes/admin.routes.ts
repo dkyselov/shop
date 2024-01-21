@@ -7,7 +7,7 @@ export const adminRoutes: Route[] = [
     pathMatch: 'full'
   },
   {
-    path: 'products-page',
+    path: 'products',
     loadComponent: () => import('../../components/admin/products/products.component').then(m => m.ProductsComponent)
   },
   {

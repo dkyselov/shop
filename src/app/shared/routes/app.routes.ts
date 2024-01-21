@@ -10,7 +10,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    loadComponent: () => import('../../components/shop/products/products.component').then(m => m.ProductsComponent),
+    loadComponent: () => import('../../pages/shop-page/shop-page.component').then(m => m.ShopPageComponent),
     children: shopRoutes
   },
   {

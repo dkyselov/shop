@@ -1,10 +1,16 @@
 import { Route } from '@angular/router';
-import {DetailsComponent} from "../../components/shop/products/details/details.component";
 
 export const shopRoutes: Route[] = [
+  {
+    path: '',
+    loadComponent: () => import('../../components/shop/products/products.component').then(m => m.ProductsComponent)
+  },
   {
     path: 'products',
     loadComponent: () => import('../../components/shop/products/products.component').then(m => m.ProductsComponent)
   },
-  { path: 'products/:id', component: DetailsComponent }
+  {
+    path: 'products/:id',
+    loadComponent: () => import('../../components/shop/products/details/details.component').then(m => m.DetailsComponent)
+  }
 ];

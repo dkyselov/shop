@@ -1,0 +1,18 @@
+.not-found-container {
+  text-align: center;
+  padding: 20px;
+
+  .animated-image {
+    width: 300px; // Adjust as per your image size
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
+}
